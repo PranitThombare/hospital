@@ -110,6 +110,7 @@ public class AppointmentController {
 
         List<AppointmentListResponseDTO> appointments = appointmentService.getMyAppointments(authentication.getName());
         // sort appointments by date
+        // ok
         appointments = appointments.stream().sorted((a1, a2) -> {
             int dateCompare = a1.getDate().compareTo(a2.getDate());
             if (dateCompare != 0) {
